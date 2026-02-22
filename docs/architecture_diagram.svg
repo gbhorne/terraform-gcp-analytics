@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="tfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B42BC"/>
+      <stop offset="100%" style="stop-color:#5C32A0"/>
+    </linearGradient>
+    <linearGradient id="apiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4"/>
+      <stop offset="100%" style="stop-color:#2a6bcf"/>
+    </linearGradient>
+    <linearGradient id="gcsGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34A853"/>
+      <stop offset="100%" style="stop-color:#2a8a44"/>
+    </linearGradient>
+    <linearGradient id="bqGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4"/>
+      <stop offset="100%" style="stop-color:#1a65d6"/>
+    </linearGradient>
+    <linearGradient id="psGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EA4335"/>
+      <stop offset="100%" style="stop-color:#c5322a"/>
+    </linearGradient>
+    <linearGradient id="monGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBC04"/>
+      <stop offset="100%" style="stop-color:#d4a003"/>
+    </linearGradient>
+    <linearGradient id="dcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0"/>
+      <stop offset="100%" style="stop-color:#7B1FA2"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1100" height="700" fill="url(#bgGrad)" rx="12"/>
+  <text x="550" y="38" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Lab 02: Infrastructure as Code - Terraform on GCP</text>
+  <text x="550" y="58" text-anchor="middle" fill="#8888aa" font-size="13">49 Resources | 6 Modules | Multi-Environment (dev/prod)</text>
+  <rect x="390" y="75" width="320" height="75" rx="10" fill="url(#tfGrad)" filter="url(#shadow)" stroke="#9B59B6" stroke-width="1.5"/>
+  <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Terraform Root Module</text>
+  <text x="550" y="118" text-anchor="middle" fill="#d4b8e8" font-size="11">main.tf | variables.tf | outputs.tf | terraform.tfvars</text>
+  <text x="550" y="138" text-anchor="middle" fill="#d4b8e8" font-size="10">depends_on orchestration | common labels | provider config</text>
+  <line x1="430" y1="150" x2="120" y2="200" stroke="#4285F4" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <line x1="470" y1="150" x2="315" y2="200" stroke="#34A853" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <line x1="520" y1="150" x2="545" y2="200" stroke="#4285F4" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <line x1="600" y1="150" x2="777" y2="200" stroke="#EA4335" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <line x1="660" y1="150" x2="977" y2="200" stroke="#FBBC04" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <line x1="680" y1="150" x2="977" y2="370" stroke="#9C27B0" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+  <rect x="25" y="200" width="190" height="155" rx="8" fill="#111133" stroke="#4285F4" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="25" y="200" width="190" height="28" rx="8" fill="url(#apiGrad)"/>
+  <text x="120" y="219" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">module/apis</text>
+  <text x="35" y="248" fill="#90CAF9" font-size="9">google_project_service (11)</text>
+  <text x="35" y="264" fill="#8888aa" font-size="8.5">bigquery | storage | pubsub</text>
+  <text x="35" y="277" fill="#8888aa" font-size="8.5">datacatalog | dlp | monitoring</text>
+  <text x="35" y="290" fill="#8888aa" font-size="8.5">logging | cloudbuild | dataflow</text>
+  <text x="35" y="303" fill="#8888aa" font-size="8.5">cloudscheduler | bq-datatransfer</text>
+  <text x="35" y="322" fill="#64B5F6" font-size="8">for_each | disable_on_destroy=false</text>
+  <rect x="165" y="335" width="42" height="16" rx="4" fill="#4285F4"/>
+  <text x="186" y="347" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">11</text>
+  <rect x="225" y="200" width="180" height="155" rx="8" fill="#111133" stroke="#34A853" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="225" y="200" width="180" height="28" rx="8" fill="url(#gcsGrad)"/>
+  <text x="315" y="219" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">module/gcs</text>
+  <text x="235" y="248" fill="#A5D6A7" font-size="9">Bucket (1) + Objects (7)</text>
+  <text x="235" y="264" fill="#8888aa" font-size="8.5">Versioning: enabled</text>
+  <text x="235" y="277" fill="#8888aa" font-size="8.5">Lifecycle: Std-Nearline-Coldline</text>
+  <text x="235" y="293" fill="#8888aa" font-size="8.5">bronze/{txn,cust,prod,store,inv}/</text>
+  <text x="235" y="306" fill="#8888aa" font-size="8.5">dead-letter/ | dataflow-temp/</text>
+  <text x="235" y="322" fill="#66BB6A" font-size="8">for_each bronze_sources var</text>
+  <rect x="355" y="335" width="42" height="16" rx="4" fill="#34A853"/>
+  <text x="376" y="347" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">8</text>
+  <rect x="415" y="200" width="260" height="290" rx="8" fill="#111133" stroke="#4285F4" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="415" y="200" width="260" height="28" rx="8" fill="url(#bqGrad)"/>
+  <text x="545" y="219" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">module/bigquery</text>
+  <text x="425" y="248" fill="#90CAF9" font-size="9" font-weight="bold">Datasets (5)</text>
+  <text x="425" y="263" fill="#8888aa" font-size="8.5">retail_bronze | retail_silver | retail_gold</text>
+  <text x="425" y="276" fill="#8888aa" font-size="8.5">retail_staging (24hr expire) | data_quality</text>
+  <text x="425" y="298" fill="#90CAF9" font-size="9" font-weight="bold">Bronze Tables (5)</text>
+  <text x="425" y="313" fill="#8888aa" font-size="8.5">raw_transactions - DAY partition, store+cust cluster</text>
+  <text x="425" y="326" fill="#8888aa" font-size="8.5">raw_customers - customer_id cluster, PII fields</text>
+  <text x="425" y="339" fill="#8888aa" font-size="8.5">raw_products - category+brand cluster</text>
+  <text x="425" y="352" fill="#8888aa" font-size="8.5">raw_stores - 16 cols, full schema</text>
+  <text x="425" y="365" fill="#8888aa" font-size="8.5">raw_inventory - DAY partition, store+prod cluster</text>
+  <text x="425" y="388" fill="#90CAF9" font-size="9" font-weight="bold">Quality Table (1)</text>
+  <text x="425" y="403" fill="#8888aa" font-size="8.5">test_results - partition by run_date</text>
+  <text x="425" y="425" fill="#64B5F6" font-size="8">JSON schemas with descriptions + modes + types</text>
+  <rect x="625" y="470" width="42" height="16" rx="4" fill="#4285F4"/>
+  <text x="646" y="482" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">11</text>
+  <rect x="685" y="200" width="185" height="155" rx="8" fill="#111133" stroke="#EA4335" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="685" y="200" width="185" height="28" rx="8" fill="url(#psGrad)"/>
+  <text x="777" y="219" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">module/pubsub</text>
+  <text x="695" y="248" fill="#EF9A9A" font-size="9" font-weight="bold">Topics (4)</text>
+  <text x="695" y="263" fill="#8888aa" font-size="8.5">retail-transactions | inventory</text>
+  <text x="695" y="276" fill="#8888aa" font-size="8.5">dead-letter | pipeline-notifications</text>
+  <text x="695" y="296" fill="#EF9A9A" font-size="9" font-weight="bold">Subscriptions (3)</text>
+  <text x="695" y="311" fill="#8888aa" font-size="8.5">transactions-pull + dead-letter</text>
+  <text x="695" y="324" fill="#8888aa" font-size="8.5">inventory-pull + dead-letter</text>
+  <text x="695" y="337" fill="#8888aa" font-size="8.5">dead-letter-monitor (retain acked)</text>
+  <rect x="820" y="335" width="42" height="16" rx="4" fill="#EA4335"/>
+  <text x="841" y="347" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">7</text>
+  <rect x="880" y="200" width="195" height="155" rx="8" fill="#111133" stroke="#FBBC04" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="880" y="200" width="195" height="28" rx="8" fill="url(#monGrad)"/>
+  <text x="977" y="219" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">module/monitoring</text>
+  <text x="890" y="248" fill="#FFF59D" font-size="9" font-weight="bold">Dashboard (1)</text>
+  <text x="890" y="263" fill="#8888aa" font-size="8.5">Pub/Sub undelivered + publish rate</text>
+  <text x="890" y="276" fill="#8888aa" font-size="8.5">GCS object count + total bytes</text>
+  <text x="890" y="296" fill="#FFF59D" font-size="9" font-weight="bold">Alert Policies (2)</text>
+  <text x="890" y="311" fill="#8888aa" font-size="8.5">Dead Letter Queue depth > 100</text>
+  <text x="890" y="324" fill="#8888aa" font-size="8.5">Oldest Unacked Message > 1hr</text>
+  <rect x="1025" y="335" width="42" height="16" rx="4" fill="#FBBC04"/>
+  <text x="1046" y="347" text-anchor="middle" fill="#1a1a1a" font-size="9" font-weight="bold">3</text>
+  <rect x="880" y="370" width="195" height="130" rx="8" fill="#111133" stroke="#9C27B0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="880" y="370" width="195" height="28" rx="8" fill="url(#dcGrad)"/>
+  <text x="977" y="389" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">module/data_catalog</text>
+  <text x="890" y="418" fill="#CE93D8" font-size="9" font-weight="bold">PII Taxonomy + 8 Policy Tags</text>
+  <text x="890" y="435" fill="#8888aa" font-size="8.5">High: email, phone, DOB</text>
+  <text x="890" y="448" fill="#8888aa" font-size="8.5">Medium: person name, address</text>
+  <text x="890" y="461" fill="#8888aa" font-size="8.5">Low: demographics</text>
+  <text x="890" y="480" fill="#BA68C8" font-size="8">Hierarchical parent-child tags</text>
+  <rect x="1025" y="478" width="42" height="16" rx="4" fill="#9C27B0"/>
+  <text x="1046" y="490" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">9</text>
+  <rect x="25" y="395" width="190" height="100" rx="8" fill="#111133" stroke="#555577" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="25" y="395" width="190" height="26" rx="8" fill="#333355"/>
+  <text x="120" y="413" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">environments/</text>
+  <text x="35" y="438" fill="#aaaacc" font-size="9">dev/dev.tfvars - sandbox project</text>
+  <text x="35" y="455" fill="#aaaacc" font-size="9">prod/prod.tfvars - production project</text>
+  <text x="35" y="478" fill="#66BB6A" font-size="8">terraform apply -var-file=env/dev.tfvars</text>
+  <rect x="25" y="530" width="1050" height="50" rx="8" fill="#0d0d2b" stroke="#333355" stroke-width="1"/>
+  <text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Verification: 48/48 Passing | All Infrastructure Managed by Terraform</text>
+  <text x="100" y="572" text-anchor="middle" fill="#4285F4" font-size="11" font-weight="bold">11 APIs</text>
+  <text x="240" y="572" text-anchor="middle" fill="#34A853" font-size="11" font-weight="bold">8 GCS</text>
+  <text x="380" y="572" text-anchor="middle" fill="#4285F4" font-size="11" font-weight="bold">11 BigQuery</text>
+  <text x="530" y="572" text-anchor="middle" fill="#EA4335" font-size="11" font-weight="bold">7 Pub/Sub</text>
+  <text x="670" y="572" text-anchor="middle" fill="#FBBC04" font-size="11" font-weight="bold">3 Monitoring</text>
+  <text x="830" y="572" text-anchor="middle" fill="#CE93D8" font-size="11" font-weight="bold">9 Data Catalog</text>
+  <text x="980" y="572" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">= 49 Total</text>
+  <rect x="25" y="600" width="110" height="22" rx="6" fill="#7B42BC" opacity="0.8"/>
+  <text x="80" y="615" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Terraform 1.5+</text>
+  <rect x="145" y="600" width="110" height="22" rx="6" fill="#4285F4" opacity="0.8"/>
+  <text x="200" y="615" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Google Cloud</text>
+  <text x="550" y="615" text-anchor="middle" fill="#555577" font-size="10">Enterprise Analytics Platform - Terraform IaC | Gregory B. Horne | 2026</text>
+</svg>
