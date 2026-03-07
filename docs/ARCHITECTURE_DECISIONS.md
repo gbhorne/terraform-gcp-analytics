@@ -1,4 +1,4 @@
-# Architecture Decision Records — Lab 02: Terraform IaC
+# Architecture Decision Records - Terraform IaC
 
 ## ADR-01: Modular Terraform Structure
 
@@ -24,7 +24,7 @@
 
 **Rationale:**
 - Adding or removing items from a count list shifts all indices, causing unnecessary destroys
-- `for_each` keys are stable — adding a new topic does not affect existing ones
+- `for_each` keys are stable - adding a new topic does not affect existing ones
 - State references are human-readable: `google_pubsub_topic.topics["retail-transactions"]`
 
 ---
