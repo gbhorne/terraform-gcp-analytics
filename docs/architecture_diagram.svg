@@ -35,7 +35,7 @@
     <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/></filter>
   </defs>
   <rect width="1100" height="700" fill="url(#bgGrad)" rx="12"/>
-  <text x="550" y="38" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Lab 02: Infrastructure as Code - Terraform on GCP</text>
+  <text x="550" y="38" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Infrastructure as Code - Terraform on GCP</text>
   <text x="550" y="58" text-anchor="middle" fill="#8888aa" font-size="13">49 Resources | 6 Modules | Multi-Environment (dev/prod)</text>
   <rect x="390" y="75" width="320" height="75" rx="10" fill="url(#tfGrad)" filter="url(#shadow)" stroke="#9B59B6" stroke-width="1.5"/>
   <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Terraform Root Module</text>
